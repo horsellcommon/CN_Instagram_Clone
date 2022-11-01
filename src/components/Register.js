@@ -6,6 +6,11 @@ const Register = ({ setter }) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    console.log(username, email, password);
+  };
+
   return (
     <form onSubmit={submitHandler}>
       <label>
