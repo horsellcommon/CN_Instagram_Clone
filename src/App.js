@@ -4,10 +4,15 @@ import Sidebar from "./components/Sidebar";
 import Register from "./components/Register";
 
 function App() {
+  const [user, setUser] = useState();
+
   return (
     <div className="App">
       <h1>Register</h1>
-      <Register />
+      <Register setter={setUser} />
+      
+
+      {user ? <h2>Welcome, {user}!</h2> : <h2>Please register.</h2>}
     </div>
   );
 }

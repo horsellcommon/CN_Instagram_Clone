@@ -17,3 +17,5 @@ export const regUser = async (username, email, password, setter) => {
     console.log(error);
   }
 };
+
+export const readUsers = async () => {};
