@@ -9,7 +9,8 @@ const Register = ({ setter }) => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(username, email, password);
+    // console.log(username, email, password);
+    await regUser(username, email, password, setter);
   };
 
   return (

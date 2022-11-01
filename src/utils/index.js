@@ -12,6 +12,7 @@ export const regUser = async (username, email, password, setter) => {
 
     const data = await response.json();
     console.log(data);
+    setter(data.username);
   } catch (error) {
     console.log(error);
   }
