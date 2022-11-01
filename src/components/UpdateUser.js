@@ -35,5 +35,5 @@ const UpdateUser = ({ setter }) => {
     );
   };
   
-  export default Register;
+  export default UpdateUser;
   
