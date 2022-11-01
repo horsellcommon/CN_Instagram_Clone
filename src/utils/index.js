@@ -4,9 +4,9 @@ export const regUser = async (username, email, password, setter) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        username: username,
-        email: email,
-        password: password,
+        "username": username,
+        "email": email,
+        "password": password,
       }),
     });
 
@@ -34,12 +34,16 @@ export const readUsers = async () => {
   }
 };
 
-export const updateUsers = async (username) => {
+export const updateUsers = async (username, key, value) => {
   try {
     const response = await fetch("http://localhost:5001/update", {
       method: "UPDATE",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({})
+      body: JSON.stringify({
+        "username": username,
+        "key": key,
+        "value": value,
+      })
     })
   } catch (error) {
     console.log(error);
