@@ -1,8 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { readUsers } from "../utils";
 
 const ReadUsers = () => {
   const [usernames, setUsernames] = useState();
+
+  useEffect(() => {
+    loadUsers();
+  }, []);
+
+  //Can't use async inside useEffect so do it all outside and bring it in
+  const loadUsers = async () => {
+    await readUsers();
+  };
 
   return (
     <div className="container">

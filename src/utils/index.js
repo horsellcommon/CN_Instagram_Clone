@@ -4,9 +4,9 @@ export const regUser = async (username, email, password, setter) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        "username": username,
-        "email": email,
-        "password": password,
+        username: username,
+        email: email,
+        password: password,
       }),
     });
 
@@ -25,7 +25,10 @@ export const readUsers = async () => {
       headers: { "Content-Type": "application/json" },
     });
     const data = await response.json();
-    console.log(data);
+    // console.log(data.user);
+    const usernames = data.user.map((users) => users.username);
+    // console.log(usernames)
+    return usernames;
   } catch (error) {
     console.log(error);
   }

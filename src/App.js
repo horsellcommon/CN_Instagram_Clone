@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import Register from "./components/Register";
+import ReadUsers from "./components/ReadUsers";
 
 function App() {
   const [user, setUser] = useState();
@@ -10,9 +11,16 @@ function App() {
     <div className="App">
       <h1>Register</h1>
       <Register setter={setUser} />
-      
+      <ReadUsers />
 
-      {user ? <h2>Welcome, {user}!</h2> : <h2>Please register.</h2>}
+      {user ? (
+        <>
+          <h2>Welcome, {user}!</h2>
+          {/* <ReadUsers /> */}
+        </>
+      ) : (
+        <h2>Please register.</h2>
+      )}
     </div>
   );
 }
