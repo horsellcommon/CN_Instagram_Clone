@@ -1,4 +1,7 @@
-function App() {
+import React from "react";
+import { useState, useEffect } from "react";
+
+const Fetcher = () => {
   useEffect(() => {
     fetchImages();
   }, []);
@@ -44,4 +47,4 @@ function App() {
       )}
     </div>
   );
-}
+};
