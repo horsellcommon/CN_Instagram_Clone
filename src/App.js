@@ -11,12 +11,11 @@ function App() {
     <div className="App">
       <h1>Register</h1>
       <Register setter={setUser} />
-      <ReadUsers />
 
       {user ? (
         <>
           <h2>Welcome, {user}!</h2>
-          {/* <ReadUsers /> */}
+          <ReadUsers />
         </>
       ) : (
         <h2>Please register.</h2>

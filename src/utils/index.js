@@ -34,6 +34,16 @@ export const readUsers = async () => {
   }
 };
 
-export const updateUsers = async () => {};
+export const updateUsers = async (username) => {
+  try {
+    const response = await fetch("http://localhost:5001/update", {
+      method: "UPDATE",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({})
+    })
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const deleteUser = async () => {};

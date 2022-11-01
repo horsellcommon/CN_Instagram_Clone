@@ -11,16 +11,17 @@ const ReadUsers = () => {
 
   //Can't use async inside useEffect so do it all outside and bring it in
   const loadUsers = async () => {
-    await readUsers();
+    let users = await readUsers();
+    setUsernames(users);
   };
 
   return (
     <div className="container">
       {usernames?.length > 0 ? (
         <div className="usernames">
-          {usernames.map((user) => {
-            <h3>{user}</h3>;
-          })}
+          {usernames.map((user) => (
+            <h3>{user}</h3>
+          ))}
         </div>
       ) : (
         <div className="empty">
