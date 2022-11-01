@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { regUser } from "../utils";
 
 const Register = ({ setter }) => {
   const [username, setUsername] = useState();
@@ -28,7 +29,7 @@ const Register = ({ setter }) => {
         <input onChange={(e) => setPassword(e.target.value)} />
       </label>
 
-      <button tpye="submit">Click here to register</button>
+      <button type="submit">Click here to register</button>
     </form>
   );
 };
