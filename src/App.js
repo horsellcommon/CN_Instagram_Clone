@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import Register from "./components/Register";
 import ReadUsers from "./components/ReadUsers";
+import UpdateUser from "./components/UpdateUser";
 
 function App() {
   const [user, setUser] = useState();
