@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Register</h1>
+      <h1>Login</h1>
       <Login setter={setUser} />
 
       {user ? (
@@ -25,7 +25,7 @@ function App() {
           <Fetcher />
         </>
       ) : (
-        <h2>Please register.</h2>
+        <h2>Please log in.</h2>
       )}
     </div>
   );

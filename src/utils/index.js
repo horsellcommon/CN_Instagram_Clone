@@ -67,3 +67,5 @@ export const deleteUser = async (username) => {
     console.log(error);
   }
 };
+
+export const loginUser = () => {};
