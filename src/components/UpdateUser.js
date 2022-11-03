@@ -6,6 +6,19 @@ const UpdateUser = ({ user }) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
+  const updateUsername = async (e) => {
+    e.preventDefault();
+    console.log(username);
+  };
+  const updateEmail = async (e) => {
+    e.preventDefault();
+    console.log(email);
+  };
+  const updatePassword = async (e) => {
+    e.preventDefault();
+    console.log(password);
+  };
+
   return (
     <>
       <form onSubmit={updateUsername}>
