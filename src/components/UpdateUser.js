@@ -1,37 +1,36 @@
 import React from "react";
 import { useState } from "react";
-import { updateUsers } from "../utils";
 
-const UpdateUser = () => {
+const UpdateUser = ({ user }) => {
   const [username, setUsername] = useState();
-  const [key, setKey] = useState();
-  const [value, setValue] = useState();
-
-  const submitHandler = async (e) => {
-    e.preventDefault();
-    // console.log(username, email, password);
-    await updateUsers(username, key, value, setter);
-  };
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
   return (
-    <form onSubmit={submitHandler}>
-      <label>
-        Username:
-        <input onChange={(e) => setUsername(e.target.value)} />
-      </label>
+    <>
+      <form onSubmit={updateUsername}>
+        <label>
+          Update username:
+          <input onChange={(e) => setUsername(e.target.value)} />
+        </label>
+      </form>
 
-      <label>
-        What key would you like to change?:
-        <input onChange={(e) => setKey(e.target.value)} />
-      </label>
+      <form onSubmit={updateEmail}>
+        <label>
+          Update email:
+          <input onChange={(e) => setEmail(e.target.value)} />
+        </label>
+      </form>
 
-      <label>
-        New Value:
-        <input onChange={(e) => setValue(e.target.value)} />
-      </label>
+      <form onSubmit={updatePassword}>
+        <label>
+          Update password:
+          <input onChange={(e) => setPassword(e.target.value)} />
+        </label>
 
-      <button type="submit">Click here to update value</button>
-    </form>
+        <button type="submit">Click here to update value</button>
+      </form>
+    </>
   );
 };
 
