@@ -14,3 +14,5 @@ const DeleteUser = ({ user }) => {
     </form>
   );
 };
+
+export default DeleteUser;
