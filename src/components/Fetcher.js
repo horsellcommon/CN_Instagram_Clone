@@ -40,6 +40,12 @@ const Fetcher = () => {
                   width="200"
                   alt="Random fetched"
                 />
+                <div className="author-text">
+                  <h6>{item.author}</h6>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur...
+                  </p>
+                </div>
               </div>
             );
           })}
