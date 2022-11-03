@@ -45,6 +45,8 @@ export const updateUser = async (username, key, value) => {
         "value": value,
       })
     })
+    const data = await response.json();
+    console.log(data);
   } catch (error) {
     console.log(error);
   }
