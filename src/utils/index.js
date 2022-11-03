@@ -52,4 +52,18 @@ export const updateUser = async (username, key, value) => {
   }
 };
 
-export const deleteUser = async () => {};
+export const deleteUser = async (username) => {
+  try {
+    const response = await fetch("http://localhost:5001/delete", {
+      method: "DELETE",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        "username": username,
+      })
+    })
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
