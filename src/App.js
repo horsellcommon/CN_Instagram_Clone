@@ -12,12 +12,12 @@ function App() {
     <div className="App">
       <h1>Register</h1>
       <Register setter={setUser} />
-      <UpdateUser />
 
       {user ? (
         <>
           <h2>Welcome, {user}!</h2>
           <ReadUsers />
+          <UpdateUser user={user} />
         </>
       ) : (
         <h2>Please register.</h2>
