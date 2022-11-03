@@ -34,10 +34,10 @@ export const readUsers = async () => {
   }
 };
 
-export const updateUsers = async (username, key, value) => {
+export const updateUser = async (username, key, value) => {
   try {
     const response = await fetch("http://localhost:5001/update", {
-      method: "UPDATE",
+      method: "PUT",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
         "username": username,
