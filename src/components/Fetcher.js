@@ -48,3 +48,5 @@ const Fetcher = () => {
     </div>
   );
 };
+
+export default Fetcher;

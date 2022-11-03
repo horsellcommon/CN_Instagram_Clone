@@ -5,6 +5,7 @@ import Register from "./components/Register";
 import ReadUsers from "./components/ReadUsers";
 import UpdateUser from "./components/UpdateUser";
 import DeleteUser from "./components/DeleteUser";
+import Fetcher from "./components/Fetcher";
 
 function App() {
   const [user, setUser] = useState();
@@ -20,6 +21,7 @@ function App() {
           <ReadUsers />
           <UpdateUser user={user} />
           <DeleteUser user={user} />
+          <Fetcher />
         </>
       ) : (
         <h2>Please register.</h2>
