@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Register from "./components/Register";
+import Login from "./components/Login";
 import ReadUsers from "./components/ReadUsers";
 import UpdateUser from "./components/UpdateUser";
 import DeleteUser from "./components/DeleteUser";
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <h1>Register</h1>
-      <Register setter={setUser} />
+      <Login setter={setUser} />
 
       {user ? (
         <>
