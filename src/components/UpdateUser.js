@@ -13,6 +13,7 @@ const UpdateUser = ({ user }) => {
           Update username:
           <input onChange={(e) => setUsername(e.target.value)} />
         </label>
+        <button type="submit">Click here to update username value</button>
       </form>
 
       <form onSubmit={updateEmail}>
@@ -20,6 +21,7 @@ const UpdateUser = ({ user }) => {
           Update email:
           <input onChange={(e) => setEmail(e.target.value)} />
         </label>
+        <button type="submit">Click here to update email value</button>
       </form>
 
       <form onSubmit={updatePassword}>
@@ -28,7 +30,7 @@ const UpdateUser = ({ user }) => {
           <input onChange={(e) => setPassword(e.target.value)} />
         </label>
 
-        <button type="submit">Click here to update value</button>
+        <button type="submit">Click here to update password value</button>
       </form>
     </>
   );
