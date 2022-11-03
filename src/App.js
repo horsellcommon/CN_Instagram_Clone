@@ -1,9 +1,10 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Register from "./components/Register";
 import ReadUsers from "./components/ReadUsers";
 import UpdateUser from "./components/UpdateUser";
+import DeleteUser from "./components/DeleteUser";
 
 function App() {
   const [user, setUser] = useState();
@@ -18,6 +19,7 @@ function App() {
           <h2>Welcome, {user}!</h2>
           <ReadUsers />
           <UpdateUser user={user} />
+          <DeleteUser user={user} />
         </>
       ) : (
         <h2>Please register.</h2>
