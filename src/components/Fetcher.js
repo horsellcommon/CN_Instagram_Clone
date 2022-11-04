@@ -1,5 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Heart from "../images/instaheart.png";
+import Comment from "../images/instacomment.png";
+import Share from "../images/instashare.png";
+import Bookmark from "../images/instabookmark.png";
 
 const Fetcher = () => {
   useEffect(() => {
@@ -40,11 +44,17 @@ const Fetcher = () => {
                   width="200"
                   alt="Random fetched"
                 />
+                <div className="icons">
+                  <img src={Heart} width="28" height="28" />
+                  <img src={Comment} width="28" height="28" />
+                  <img src={Share} width="28" height="28" />
+                  <div id="bookmark">
+                    <img src={Bookmark} width="28" height="28" />
+                  </div>
+                </div>
                 <div className="author-text">
                   <h6>{item.author}</h6>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur...
-                  </p>
+                  <p>Lorem ipsum dolor sit amet, consectetur...</p>
                 </div>
               </div>
             );

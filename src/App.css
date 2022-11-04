@@ -2,24 +2,57 @@
   text-align: center;
 }
 
+.contained{
+  display: flex;
+  margin: auto;
+  padding: 1%;
+  justify-content: center;
+  flex-direction: column;
+  border: thick black solid;
+  width: 80%;
+}
+
+.maincontainer{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
+  border: thick red solid;
+  width: 40%;
+}
 #image-header{
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  border: thin grey solid;
+  width: 50.5%;
 }
 
 h6{
   margin-left: 1%;
 }
 
+.icons{
+  display: flex;
+  justify-content: flex-start;
+  border: thin grey solid;
+  width: 50.5%;
+}
+
+#bookmark{
+  display: flex;
+  margin-left: 44%;
+}
+
 .author-text{
   display: flex;
+  border: thin grey solid;
   justify-content: center;
   align-items: center;
   text-align: left;
   margin: auto;
-  width: 30%;
+  width: 50.5%;
 }
 
 p{
