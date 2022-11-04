@@ -33,7 +33,7 @@ const Fetcher = () => {
                     src={item.download_url}
                     height="30"
                     width="30"
-                    alt="profile picture"
+                    alt="profile"
                   />
                   <h6>{item.author}</h6>
                   <p>•</p>
