@@ -47,11 +47,11 @@ const Fetcher = () => {
                   alt="Random fetched"
                 />
                 <div className="icons">
-                  <img src={Heart} width="28" height="28" />
-                  <img src={Comment} width="28" height="28" />
-                  <img src={Share} width="28" height="28" />
+                  <img src={Heart} width="28" height="28" alt="like"/>
+                  <img src={Comment} width="28" height="28" alt="comment"/>
+                  <img src={Share} width="28" height="28" alt="share"/>
                   <div id="bookmark">
-                    <img src={Bookmark} width="28" height="28" />
+                    <img src={Bookmark} width="28" height="28" alt="bookmark"/>
                   </div>
                 </div>
                 <div className="author-text">
