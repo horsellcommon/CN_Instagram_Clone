@@ -14,7 +14,7 @@ const Fetcher = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const fetchImages = async () => {
-    const response = await fetch("https://picsum.photos/v2/list");
+    const response = await fetch(`${process.env.REACT_APP_API}`);
     const data = await response.json();
     setImages(data);
     setIsLoaded(true);

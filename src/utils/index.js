@@ -2,7 +2,7 @@ import { writeCookie } from "../common";
 
 export const regUser = async (username, email, password, setter) => {
   try {
-    const response = await fetch("http://localhost:5001/create", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}create`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -22,7 +22,7 @@ export const regUser = async (username, email, password, setter) => {
 
 export const readUsers = async () => {
   try {
-    const response = await fetch("http://localhost:5001/read", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}read`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -38,7 +38,7 @@ export const readUsers = async () => {
 
 export const updateUser = async (username, key, value) => {
   try {
-    const response = await fetch("http://localhost:5001/update", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}update`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -56,7 +56,7 @@ export const updateUser = async (username, key, value) => {
 
 export const deleteUser = async (username) => {
   try {
-    const response = await fetch("http://localhost:5001/delete", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}delete`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -72,7 +72,7 @@ export const deleteUser = async (username) => {
 
 export const loginUser = async (username, email, password, setter) => {
   try {
-    const response = await fetch("http://localhost:5001/login", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -92,7 +92,7 @@ export const loginUser = async (username, email, password, setter) => {
 
 export const findUser = async (cookie) => {
   try {
-    const response = await fetch("http://localhost:5001/login", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}login`, {
       method: "POST",
       headers: { "Content-Type": "application/json",
         "Authorization": `Bearer ${cookie}` },
