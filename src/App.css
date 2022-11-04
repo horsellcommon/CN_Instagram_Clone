@@ -8,7 +8,7 @@
   padding: 1%;
   justify-content: center;
   flex-direction: column;
-  border: thick black solid;
+  /* border: thick black solid; */
   width: 80%;
 }
 
@@ -17,7 +17,7 @@
   margin: auto;
   align-items: center;
   flex-direction: column;
-  border: thick red solid;
+  /* border: thick red solid; */
   width: 40%;
 }
 #image-header{
