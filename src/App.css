@@ -29,6 +29,11 @@
   width: 50.5%;
 }
 
+#bluetext{
+  font-weight: 600;
+  color: blue;
+}
+
 h6{
   margin-left: 1%;
 }

@@ -36,6 +36,8 @@ const Fetcher = () => {
                     alt="profile picture"
                   />
                   <h6>{item.author}</h6>
+                  <p>•</p>
+                  <p id="bluetext">Follow</p>
                   {/* Insert More image here */}
                 </div>
                 <img
